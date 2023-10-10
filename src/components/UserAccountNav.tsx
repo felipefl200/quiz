@@ -22,12 +22,12 @@ export function UserAccountNav({ user }: Props) {
       <DropdownMenuTrigger className="rounded-full p-1">
         <UserAvatar user={user} />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-white" align="end">
+      <DropdownMenuContent className="bg-white dark:bg-slate-950 p-3" align="end">
         <div className="flex items-center justify-start gap-2 p-2">
           <div className="flex-flex-col space-y-1 leading-none">
             {user.name && <p className="font-medium">{user.name}</p>}
             {user.email && (
-              <p className="w-[200px] truncate text-zinc-700">{user.email}</p>
+              <p className="w-[200px] truncate text-zinc-700 dark:text-zinc-500">{user.email}</p>
             )}
           </div>
         </div>

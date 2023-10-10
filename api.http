@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/questions
+Content-Type: application/json
+
+{
+    "amount": 3,
+    "topic": "Geografia",
+    "type": "open_ended"
+}
+
+###
+POST http://localhost:3000/api/questions
+Content-Type: application/json
+
+{
+    "amount": 2,
+    "topic": "botanica",
+    "type": "mcq"
+}
+
+###
+POST http://localhost:3000/api/game
+Content-Type: application/json
+
+{
+    "amount": 2,
+    "topic": "mares",
+    "type": "mcq"
+}

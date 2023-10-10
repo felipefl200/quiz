@@ -13,6 +13,7 @@ export function UserAvatar({ user }: UserAvatarProps) {
           fill
           alt="User profile Image"
           src={user?.image || `https://ui-avatars.com/api/?name=${user.name}`}
+          sizes="(max-width: 400px) 100vw, (max-width: 1200px) 50vw, 33vw"
           referrerPolicy="no-referrer"
         />
       </div>

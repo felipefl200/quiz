@@ -2,15 +2,18 @@
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { type ThemeProviderProps } from "next-themes/dist/types";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 type Props = {
   children: React.ReactNode;
 };
 export const Providers = ({ children }: Props) => {
   return (
-    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
-      <SessionProvider>{children}</SessionProvider>;
-    </NextThemesProvider>
+    <QueryClientProvider client={new QueryClient()}>
+      <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+        <SessionProvider>{children}</SessionProvider>
+      </NextThemesProvider>
+    </QueryClientProvider>
   );
 };
 
